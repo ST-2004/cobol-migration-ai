@@ -1,0 +1,101 @@
+.graph-summary {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.graph-summary__title {
+  font-size: 1.4rem;
+  color: #e0e0ff;
+  margin-bottom: 4px;
+}
+
+.graph-summary__job-id {
+  color: #7070a0;
+  font-size: 0.8rem;
+  margin-bottom: 24px;
+  word-break: break-all;
+}
+
+.graph-summary__job-id code {
+  color: #9090c0;
+}
+
+.graph-summary__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+  .graph-summary__columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.graph-summary__section h3 {
+  font-size: 1rem;
+  color: #a5aaff;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(124, 131, 253, 0.2);
+  padding-bottom: 6px;
+}
+
+.graph-summary__empty {
+  color: #5050a0;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.graph-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.graph-table th {
+  text-align: left;
+  color: #7c83fd;
+  padding: 4px 8px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(124, 131, 253, 0.25);
+}
+
+.graph-table td {
+  padding: 4px 8px;
+  color: #c0c0e0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-family: monospace;
+}
+
+.graph-table tr:hover td {
+  background: rgba(124, 131, 253, 0.06);
+}
+
+.graph-summary__calls {
+  margin-top: 8px;
+}
+
+.calls-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.calls-list li {
+  background: rgba(124, 131, 253, 0.1);
+  border: 1px solid rgba(124, 131, 253, 0.2);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  color: #c0c0e0;
+}
+
+.calls-list code {
+  color: #a5aaff;
+  font-size: 0.85rem;
+}

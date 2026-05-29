@@ -49,6 +49,32 @@ body {
   margin-top: 4rem;
 }
 
+.app-actions {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.btn--secondary {
+  background: rgba(124, 131, 253, 0.15);
+  color: #a5aaff;
+  border: 1px solid rgba(124, 131, 253, 0.3);
+}
+
+.btn--secondary:hover {
+  background: rgba(124, 131, 253, 0.25);
+}
+
 /* Utility */
 .sr-only {
   position: absolute;

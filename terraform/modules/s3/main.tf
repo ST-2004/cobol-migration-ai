@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "files" {
-  bucket = "${var.prefix}-files"
+  bucket        = "${var.prefix}-files"
+  force_destroy = true
 
   lifecycle {
     prevent_destroy = false
@@ -55,6 +56,8 @@ resource "aws_s3_bucket_lifecycle_configuration" "files" {
   rule {
     id     = "intelligent-tiering-transition"
     status = "Enabled"
+
+    filter {}
 
     transition {
       days          = 0

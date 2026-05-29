@@ -1,5 +1,4 @@
-# Phase 0 outputs — extended in later phases
-
+# Phase 0 outputs
 output "files_bucket_name" {
   description = "S3 bucket for COBOL source files and migration outputs"
   value       = module.s3.files_bucket_name
@@ -18,4 +17,10 @@ output "lambda_execution_role_arn" {
 output "kms_key_arn" {
   description = "KMS CMK ARN for S3 and DynamoDB encryption"
   value       = module.kms.key_arn
+}
+
+# Phase 1 outputs
+output "api_endpoint" {
+  description = "HTTP API base URL — written to frontend/.env.local as VITE_API_URL"
+  value       = module.api_gateway.invoke_url
 }

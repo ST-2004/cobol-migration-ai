@@ -11,6 +11,7 @@ terraform/backend.hcl
 lambdas/**/dist/
 lambdas/**/*.zip
 lambdas/**/site-packages/
+terraform/dist/*.zip
 
 # Frontend
 frontend/node_modules/
