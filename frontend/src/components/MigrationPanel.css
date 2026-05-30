@@ -1,0 +1,170 @@
+.migration-panel {
+  background: #12122a;
+  border: 1px solid #2a2a5a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.migration-panel__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.migration-panel__title {
+  font-size: 1.1rem;
+  color: #c0c0ff;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Animated progress bar */
+.migration-panel__progress {
+  flex: 1;
+  height: 4px;
+  background: #1e1e4a;
+  border-radius: 2px;
+  overflow: hidden;
+  min-width: 100px;
+  max-width: 300px;
+}
+
+.migration-panel__bar {
+  height: 100%;
+  background: linear-gradient(90deg, #5050ff, #a060ff, #5050ff);
+  background-size: 200% 100%;
+  animation: migrate-slide 1.5s linear infinite;
+}
+
+@keyframes migrate-slide {
+  0%   { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* Badges */
+.migration-panel__badge {
+  padding: 0.2rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.migration-panel__badge--done {
+  background: rgba(0, 200, 100, 0.15);
+  color: #00c864;
+  border: 1px solid #00c864;
+}
+
+.migration-panel__badge--error {
+  background: rgba(255, 60, 60, 0.15);
+  color: #ff5555;
+  border: 1px solid #ff5555;
+}
+
+/* Start panel */
+.migration-panel__start {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.migration-panel__hint {
+  color: #8080c0;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+/* Terminal */
+.migration-panel__terminal-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.migration-panel__terminal-label {
+  font-size: 0.75rem;
+  color: #6060a0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.migration-panel__terminal {
+  background: #0a0a1a;
+  border: 1px solid #1e1e4a;
+  border-radius: 6px;
+  padding: 1rem;
+  font-family: "Fira Code", "Cascadia Code", "Consolas", monospace;
+  font-size: 0.8rem;
+  color: #a0f0a0;
+  max-height: 480px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: 1.5;
+  min-height: 120px;
+}
+
+/* Blinking cursor */
+.migration-panel__cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: #a0f0a0;
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Error message */
+.migration-panel__error {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 60, 60, 0.1);
+  border: 1px solid rgba(255, 60, 60, 0.3);
+  border-radius: 6px;
+  color: #ff8080;
+  font-size: 0.9rem;
+}
+
+/* Button overrides — reuse global .btn classes from App.css */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #5050ff, #8040ff);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  opacity: 0.9;
+}
+
+.btn--secondary {
+  background: #1e1e4a;
+  color: #c0c0ff;
+  border: 1px solid #3a3a7a;
+}
+
+.btn--secondary:hover {
+  background: #2a2a5a;
+}

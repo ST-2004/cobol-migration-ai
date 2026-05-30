@@ -23,7 +23,7 @@ export default function FileUpload({ onParsed }) {
       const res = await fetch(`${API_URL}/parse`, { method: "POST", body: form });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
-      onParsed(data.job_id, data.graph);
+      onParsed(data.job_id, data.created_at || "", data.graph);
     } catch (err) {
       setError(err.message);
     } finally {

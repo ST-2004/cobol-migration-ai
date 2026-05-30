@@ -13,6 +13,16 @@ variable "parse_cobol_function_name" {
   type        = string
 }
 
+variable "trigger_migrate_invoke_arn" {
+  description = "Invoke ARN of the trigger_migrate Lambda"
+  type        = string
+}
+
+variable "trigger_migrate_function_name" {
+  description = "Name of the trigger_migrate Lambda function"
+  type        = string
+}
+
 variable "aws_region" {
   description = "AWS region"
   type        = string
@@ -26,4 +36,10 @@ variable "account_id" {
 variable "env_local_path" {
   description = "Absolute path to frontend/.env.local for local-exec write"
   type        = string
+}
+
+variable "ws_endpoint" {
+  description = "WebSocket endpoint URL (wss://...) to write to .env.local"
+  type        = string
+  default     = ""
 }

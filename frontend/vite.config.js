@@ -11,11 +11,9 @@ export default defineConfig(({ mode }) => {
     server: {
       proxy: apiUrl
         ? {
-            '/parse': {
-              target: apiUrl,
-              changeOrigin: true,
-              rewrite: (path) => path,
-            },
+            '/parse': { target: apiUrl, changeOrigin: true },
+            '/migrate': { target: apiUrl, changeOrigin: true },
+            '/job': { target: apiUrl, changeOrigin: true },
           }
         : {},
     },

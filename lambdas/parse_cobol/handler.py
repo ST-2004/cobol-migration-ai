@@ -115,7 +115,7 @@ def handler(event, context):
         return {
             "statusCode": 200,
             "headers": CORS_HEADERS,
-            "body": json.dumps({"job_id": job_id, "graph": graph}),
+            "body": json.dumps({"job_id": job_id, "created_at": created_at, "graph": graph}),
         }
 
     except Exception as exc:

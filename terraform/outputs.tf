@@ -24,3 +24,19 @@ output "api_endpoint" {
   description = "HTTP API base URL — written to frontend/.env.local as VITE_API_URL"
   value       = module.api_gateway.invoke_url
 }
+
+# Phase 2 outputs
+output "ws_endpoint" {
+  description = "WebSocket API endpoint (wss://...) — written to frontend/.env.local as VITE_WS_URL"
+  value       = module.websocket.ws_endpoint
+}
+
+output "connections_table_name" {
+  description = "DynamoDB table for WebSocket connections"
+  value       = module.dynamodb.connections_table_name
+}
+
+output "state_machine_arn" {
+  description = "Step Functions Express state machine ARN"
+  value       = module.step_functions.state_machine_arn
+}
